@@ -177,8 +177,23 @@ body {
 .section2-container1 picture img {
   height: 20rem;
   border-radius: 50%;
-  border: rgb(255, 255, 255) 10px solid;
+  border: rgb(255, 255, 255) 10px solid; 
+  opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view(800px 100px);
+  z-index: 12;
 }
+
+@keyframes fade-in {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes swipe-in {
+  from {transform: translate(100px);}
+  to {transform: translate(0px);}
+}
+
 .section2-container2 {
   background-color: #69c022e6;
 
@@ -188,6 +203,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: swipe-in linear forwards;
+  animation-timeline: view(700px 100px);
+  border: white 10px solid;
 }
 
 
@@ -200,7 +218,7 @@ body {
 
 .section2-h2 {
   margin: 0;
-  color: whitesmoke;
+  color: #FDCB9E;
 }
 
 
