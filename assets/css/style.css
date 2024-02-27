@@ -9,7 +9,7 @@
 
   /*=========== Colors ===========*/
   /* Change favorite color */
-  --hue-color: 360;
+  --hue-color: 210;
 
   /* HSL color mode */
   --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -94,7 +94,7 @@
   /*=========== BASE ===========*/
   *{
     box-sizing: border-box;
-    padding: none;
+    padding: 0;
     margin: 0;
   }
   html {
@@ -963,6 +963,11 @@
   .scrollup:hover {
     background-color: var(--first-color-alt);
   }
+  .scrollup:active {
+    background-color:black;
+  }
+
+  
 
   .scrollup__icon{
     font-size: 1.5rem;
@@ -1044,6 +1049,7 @@
 
 /* For Medium devices */
 @media screen and (min-width: 568px) {
+  
   .home__content{
     grid-template-columns: max-content 1fr 1fr;
   }
@@ -1053,6 +1059,7 @@
   .home__img{
     order: 1;
     justify-self: center;
+    display: inline;
   }
   .about__container,
   .skills__container,
